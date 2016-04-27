@@ -1,0 +1,39 @@
+{
+  "name": "material-ui-youtube-autocomplete",
+  "version": "1.0.0",
+  "description": "material-ui-youtube-autocomplete React component",
+  "main": "lib/index.js",
+  "jsnext:main": "es6/index.js",
+  "files": [
+    "css",
+    "es6",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "test": "nwb test"
+  },
+  "dependencies": {
+    "jsonp": "^0.2.0",
+    "react-tap-event-plugin": "^0.2.2"
+  },
+  "peerDependencies": {
+    "react": "0.14.x",
+    "material-ui": "^0.14.4"
+  },
+  "devDependencies": {
+    "nwb": "0.7.x",
+    "react": "0.14.x",
+    "react-dom": "0.14.x"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ]
+}
