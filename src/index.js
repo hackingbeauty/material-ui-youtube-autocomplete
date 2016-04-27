@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { AutoComplete } 		from 'material-ui';
 import JSONP 								from 'jsonp';
 import YoutubeFinder 				from 'youtube-finder';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
-injectTapEventPlugin();
 
 const googleAutoSuggestURL = '//suggestqueries.google.com/complete/search?client=youtube&ds=yt&q=';
 
