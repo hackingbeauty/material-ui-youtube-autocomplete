@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "jsonp": "^0.2.0",
-    "react-tap-event-plugin": "^0.2.2"
+    "react-tap-event-plugin": "^0.2.2",
+    "youtube-finder": "^1.0.0"
   },
   "peerDependencies": {
     "react": "0.14.x",
