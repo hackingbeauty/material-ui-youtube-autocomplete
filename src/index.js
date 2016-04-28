@@ -64,13 +64,14 @@ class MaterialUIAutocomplete extends Component {
       self.setState({
       	dataSource : [],
       	inputValue : ''
-      })
+      });
     });
 	}
 
   render() {
     return <div>
 	    <AutoComplete
+	    	searchText 					={this.state.inputValue}
 	      floatingLabelText 	={this.props.placeHolder}
 	      filter 							={AutoComplete.noFilter}
 	      triggerUpdateOnFocus={true}
