@@ -29,6 +29,7 @@ class MaterialUIAutocomplete extends Component {
 	      if(error) return console.log(error);
 
 				searchResults = data[1];
+
         retrievedSearchTerms = searchResults.map(function(result) {
         	return result[0];
         });
@@ -60,7 +61,7 @@ class MaterialUIAutocomplete extends Component {
 
     this.YoutubeClient.search(params, function(error,results){
       if(error) return console.log(error);
-      self.props.callback(results.items);
+      self.props.callback(results.items,searchTerm);
       self.setState({
       	dataSource : [],
       	inputValue : ''

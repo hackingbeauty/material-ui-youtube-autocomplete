@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "react": "0.14.x",
-    "material-ui": "^0.14.4",
+    "material-ui": "^0.15.0-alpha.2",
     "react-tap-event-plugin": "^0.2.2"
   },
   "devDependencies": {
