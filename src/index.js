@@ -73,7 +73,7 @@ var
   render() {
     return <div>
       <AutoComplete
-        searchText 					={this.state.inputValue}
+        searchText          ={this.state.inputValue}
         floatingLabelText   ={this.props.placeHolder}
         filter              ={AutoComplete.noFilter}
         triggerUpdateOnFocus={true}
