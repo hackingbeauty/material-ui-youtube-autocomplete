@@ -1,44 +1,61 @@
 # material-ui-youtube-autocomplete
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+A React.js Autcomplete complete component inspired by Material-UI.
 
-Collaborating on this React component:
 
-## Prerequisites
+## Demo
 
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with npm)
-* [nwb](https://github.com/insin/nwb/) - `npm install -g nwb`
+See this [compenent in action](https://videoyak.io)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
+`npm install --save material-ui-youtube-autocomplete`
 
-## Running / Development
 
-* `nwb serve` will run the component's demo app
-* Visit the demo at [http://localhost:3000](http://localhost:3000)
+## Features
 
-### Running Tests
+- Material-UI stylized search input
+- Auto-suggest drop-down as user types (suggested results come from Youtube)
+- Retrieve collection of video search results from Youtube
 
-* `nwb test` will run the tests once
-* `nwb test --server` will run the tests on every change
 
-### Building
+## Usage
 
-* `nwb build`
+```js
+import YoutubeAutcomplete from 'material-ui-youtube-autocomplete';
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.svg?style=flat-square
-[build]: https://travis-ci.org/user/repo
+<YoutubeAutocomplete
+  apiKey={string}        // you must get an API key from google if you want video search results returned
+  maxResults={string}    // defaults -> 50. Number of video search results you want
+  placeHolder={string}   // defaults -> "Search Youtube"
+  callback={function}    // callback to execute when search results are retrieved
+/>
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.svg?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.svg?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+## Example
+
+```js
+import YoutubeAutocomplete from 'material-ui-youtube-autocomplete';
+
+class Example extends React.Component {
+  render() {
+    return (
+      <YouTubeAutocomplete
+        apiKey="YOUR-API-KEY-THAT-YOUR-REGISTERED-WITH-GOOGLE"
+        placeHolder="Search Youtube"
+        maxResults="20"
+        callback={this._onSearchResultsFound}
+      />
+    );
+  }
+
+  _onSearchResultsFound(results) {
+    // Results is an array of retreived search results from Youtube.
+    // Do what you want with the results here.
+  }
+}
+```
+
+## License
+
+MIT
