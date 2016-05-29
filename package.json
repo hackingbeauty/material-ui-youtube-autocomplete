@@ -21,7 +21,7 @@
     "youtube-finder": "^1.0.0"
   },
   "peerDependencies": {
-    "react": "0.14.x",
+    "react": "^15.0.0",
     "material-ui": "^0.15.0-alpha.2",
     "react-tap-event-plugin": "^0.2.2"
   },
