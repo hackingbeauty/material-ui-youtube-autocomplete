@@ -32,7 +32,19 @@ class MaterialUIAutocomplete extends Component {
 
     if(this.state.inputValue !== '') {
       JSONP(url, function(error, data) {
-        //Will maninuplate video search results here
+        var searchResults, retrievedSearchTerms;
+
+        if(error) return console.log(error);
+
+        searchResults = data[1];
+
+        retrievedSearchTerms = searchResults.map(function(result) {
+          return result[0];
+        });
+
+        self.setState({
+          dataSource : retrievedSearchTerms
+        });
       });
     }
   }
