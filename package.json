@@ -18,17 +18,14 @@
   },
   "dependencies": {
     "jsonp": "^0.2.0",
-    "material-ui": "^0.15.0",
+    "material-ui": "^0.15.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-tap-event-plugin": "^1.0.0",
     "youtube-finder": "^1.0.0"
   },
-  "peerDependencies": {
-    "react": "^15.0.0",
-    "react-tap-event-plugin": "^0.2.2"
-  },
   "devDependencies": {
-    "nwb": "0.7.x",
-    "react": "0.14.x",
-    "react-dom": "0.14.x"
+    "nwb": "0.7.x"
   },
   "author": "",
   "homepage": "",
