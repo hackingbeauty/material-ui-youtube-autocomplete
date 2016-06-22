@@ -10,6 +10,7 @@ class MaterialUIAutocomplete extends Component {
   constructor(props) {
     super(props);
     this.onUpdateInput  = this.onUpdateInput.bind(this);
+    this.onNewRequest   = this.onNewRequest.bind(this);
     this.state = {
       dataSource : [],
       inputValue : ''
@@ -49,11 +50,16 @@ class MaterialUIAutocomplete extends Component {
     }
   }
 
+  onNewRequest(searchTerm) {
+    alert('test123!');
+  }
+
   render() {
     return <MuiThemeProvider muiTheme={getMuiTheme()}>
       <AutoComplete
         dataSource    ={this.state.dataSource}
-        onUpdateInput ={this.onUpdateInput} />
+        onUpdateInput ={this.onUpdateInput}
+        onNewRequest  ={this.onNewRequest} />
       </MuiThemeProvider>
   }
 }
