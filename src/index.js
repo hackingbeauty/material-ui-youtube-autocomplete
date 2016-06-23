@@ -4,6 +4,7 @@ import JSONP                from 'jsonp';
 import getMuiTheme          from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import YoutubeFinder        from 'youtube-finder';
 
 injectTapEventPlugin();
 
@@ -63,8 +64,9 @@ class MaterialUIAutocomplete extends Component {
         maxResults  : '50'
       }
 
-    this.YoutubeClient.search(params, function(error,results) {
+    this.YoutubeFinder.search(params, function(error,results) {
       if(error) return console.log(error);
+      debugger;
       self.props.callback(results.items,searchTerm);
       self.setState({
         dataSource : [],
