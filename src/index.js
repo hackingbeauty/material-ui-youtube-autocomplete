@@ -15,6 +15,7 @@ class MaterialUIAutocomplete extends Component {
     super(props);
     this.onUpdateInput  = this.onUpdateInput.bind(this);
     this.onNewRequest   = this.onNewRequest.bind(this);
+    this.YoutubeClient  = YoutubeFinder.createClient({ key: this.props.apiKey });
     this.state = {
       dataSource : [],
       inputValue : ''
@@ -66,7 +67,7 @@ class MaterialUIAutocomplete extends Component {
 
     this.YoutubeFinder.search(params, function(error,results) {
       if(error) return console.log(error);
-      debugger;
+
       self.props.callback(results.items,searchTerm);
       self.setState({
         dataSource : [],
