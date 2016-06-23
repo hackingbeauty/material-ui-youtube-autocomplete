@@ -54,7 +54,23 @@ class MaterialUIAutocomplete extends Component {
   }
 
   onNewRequest(searchTerm) {
-    alert('test123!');
+    var
+      self   = this,
+      params = {
+        part        : 'id,snippet',
+        type        : 'video',
+        q           : this.state.inputValue,
+        maxResults  : '50'
+      }
+
+    this.YoutubeClient.search(params, function(error,results) {
+      if(error) return console.log(error);
+      self.props.callback(results.items,searchTerm);
+      self.setState({
+        dataSource : [],
+        inputValue : ''
+      });
+    });
   }
 
   render() {
