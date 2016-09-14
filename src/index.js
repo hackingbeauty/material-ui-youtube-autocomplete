@@ -23,13 +23,13 @@ class MaterialUIAutocomplete extends Component {
   }
 
   performSearch() {
-    var
+    const
       self = this,
       url  = googleAutoSuggestURL + this.state.inputValue;
 
     if(this.state.inputValue !== '') {
       JSONP(url, function(error, data) {
-        var searchResults, retrievedSearchTerms;
+        let searchResults, retrievedSearchTerms;
 
         if(error) return console.log(error);
 
@@ -47,7 +47,8 @@ class MaterialUIAutocomplete extends Component {
   }
 
   onUpdateInput(inputValue) {
-    var self = this;
+    const self = this;
+
     this.setState({
       inputValue : inputValue
       },function(){
@@ -56,7 +57,7 @@ class MaterialUIAutocomplete extends Component {
   }
 
   onNewRequest(searchTerm) {
-    var
+    const
       self   = this,
       params = {
         part        : 'id,snippet',
