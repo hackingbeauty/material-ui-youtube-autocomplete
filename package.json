@@ -30,7 +30,7 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/hackingbeauty/material-ui-youtube-autocomplete",
   "keywords": [
     "react-component"
   ]
